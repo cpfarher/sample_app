@@ -28,3 +28,25 @@ Started GET "/pages/home" for 127.0.0.1 at 2011-04-25 18:54:56 -0300
   Processing by PagesController#home as HTML
 Rendered pages/home.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-04-25 19:31:12 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/users" for 127.0.0.1 at 2011-04-25 19:31:25 -0300
+
+ActionController::RoutingError (No route matches "/pages/users"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-04-25 19:31:31 -0300
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
