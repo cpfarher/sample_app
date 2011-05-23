@@ -50,3 +50,829 @@ ActionController::RoutingError (No route matches "/users"):
   
 
 Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-02 19:02:53 -0300
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-05-02 19:03:17 -0300
+
+ActionController::RoutingError (No route matches "/users/1"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:03:34 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/custom.css" for 127.0.0.1 at 2011-05-02 19:03:34 -0300
+
+ActionController::RoutingError (No route matches "/stylesheets/custom.css"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2011-05-02 19:03:34 -0300
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2011-05-02 19:28:11 -0300
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:39:21 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2011-05-02 19:39:21 -0300
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/stylesheets/custom.css" for 127.0.0.1 at 2011-05-02 19:39:21 -0300
+
+ActionController::RoutingError (No route matches "/stylesheets/custom.css"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:44:05 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/custom.css" for 127.0.0.1 at 2011-05-02 19:44:05 -0300
+
+ActionController::RoutingError (No route matches "/stylesheets/custom.css"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:49:36 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:52:09 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:54:51 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:56:33 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:57:35 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:58:01 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:58:04 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:58:52 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 19:59:38 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 20:03:45 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 20:07:33 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (36.6ms)
+Completed   in 45ms
+
+ActionView::Template::Error (Missing partial layouts/stylesheets with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/christian/rails_projects/sample_app/app/views"):
+    3:   <head>
+    4:     <title><%= title %></title>
+    5:     <%= csrf_meta_tag %>
+    6:     <%= render 'layouts/stylesheets' %>
+    7:     <!--[if lt IE 9]>
+    8:     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    9:     <![endif]-->    
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2088987580450247939_34404820_850062800704604773'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 20:10:35 -0300
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed   in 6ms
+
+ActionView::Template::Error (Missing partial layouts/stylesheets with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/christian/rails_projects/sample_app/app/views"):
+    3:   <head>
+    4:     <title><%= title %></title>
+    5:     <%= csrf_meta_tag %>
+    6:     <%= render 'layouts/stylesheets' %>
+    7:    </head>
+    8:   <body>
+    9:     <div class="container">
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2088987580450247939_32061060_850062800704604773'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-02 20:11:37 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered pages/home.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2011-05-23 17:44:49 -0300
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered pages/about.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 92ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/users" for 127.0.0.1 at 2011-05-23 17:45:30 -0300
+
+ActionController::RoutingError (No route matches "/pages/users"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 17:45:35 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 17:54:27 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (37.2ms)
+Rendered layouts/_header.html.erb (10.3ms)
+Rendered pages/home.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 18:09:23 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (60.0ms)
+Rendered layouts/_header.html.erb (9.0ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/home.html.erb within layouts/application (102.7ms)
+Completed 200 OK in 241ms (Views: 240.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 18:12:33 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (3.1ms)
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/home.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 18:17:03 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (118.2ms)
+Rendered pages/home.html.erb within layouts/application (138.1ms)
+Completed   in 154ms
+
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00000002c71968>:0x00000002c63e80>):
+    8:     </ul>
+    9:   </nav>
+    10: </footer>
+    11: <%= root_path %>
+  app/views/layouts/_footer.html.erb:11:in `_app_views_layouts__footer_html_erb___1502731176340326746_22628600__228937223191477659'
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___4479013362337991471_23265440_2772995216886041548'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 18:17:36 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.7ms)
+ERROR: compiling _app_views_layouts__footer_html_erb___1502731176340326746_20099860__228937223191477659 RAISED /home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:11: syntax error, unexpected $undefined
+');@output_buffer.append= ( ${root_path} );@output_buffer....
+                             ^
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_layouts__footer_html_erb___1502731176340326746_20099860__228937223191477659(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/_footer";_old_output_buffer = @output_buffer;footer = local_assigns[:footer];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<footer>
+  <nav class="round">
+    <ul>
+      <li>');@output_buffer.append= ( link_to "About", '#' );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "Contact", '#' );@output_buffer.safe_concat('</li>
+      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+    </ul>
+  </nav>
+</footer>
+');@output_buffer.append= ( ${root_path} );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `module_eval'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `compile'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:134:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:262:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:260:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:31:in `render'
+/home/christian/rails_projects/sample_app/app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___4479013362337991471_20331040_2772995216886041548'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:135:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:26:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:93:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:150:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:436:in `_run__4044478501976402178__process_action__3217585653243370466__callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:119:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:41:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:138:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:178:in `block in action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:32:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:12:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:31:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/logger.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:168:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:77:in `method_missing'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (6.6ms)
+Completed   in 16ms
+
+ActionView::Template::Error (/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:11: syntax error, unexpected $undefined
+');@output_buffer.append= ( ${root_path} );@output_buffer....
+                             ^
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:15: syntax error, unexpected keyword_end, expecting ')'):
+    8:     </ul>
+    9:   </nav>
+    10: </footer>
+    11: <%= ${root_path} %>
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___4479013362337991471_20331040_2772995216886041548'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 18:17:50 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/home.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/help" for 127.0.0.1 at 2011-05-23 18:36:34 -0300
+
+ActionController::RoutingError (No route matches "/pages/help"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2011-05-23 18:43:32 -0300
+  Processing by PagesController#help as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/help.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-05-23 18:48:23 -0300
+
+ActionController::RoutingError (No route matches "/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 18:48:41 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered pages/home.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 73ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2011-05-23 18:48:51 -0300
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/about.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2011-05-23 18:49:02 -0300
+
+ActionController::RoutingError (No route matches "/pages/about"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-05-23 18:49:13 -0300
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered pages/about.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-05-23 18:52:29 -0300
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.9ms)
+ERROR: compiling _app_views_layouts__footer_html_erb___1502731176340326746_15295040__228937223191477659 RAISED /home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:11: syntax error, unexpected $undefined
+');@output_buffer.append= ( ${root_path} );@output_buffer....
+                             ^
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_layouts__footer_html_erb___1502731176340326746_15295040__228937223191477659(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/_footer";_old_output_buffer = @output_buffer;footer = local_assigns[:footer];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<footer>
+  <nav class="round">
+    <ul>
+      <li>');@output_buffer.append= ( link_to "About", '#' );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "Contact", '#' );@output_buffer.safe_concat('</li>
+      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+    </ul>
+  </nav>
+</footer>
+');@output_buffer.append= ( ${root_path} );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `module_eval'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `compile'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:134:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:262:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:260:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:31:in `render'
+/home/christian/rails_projects/sample_app/app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___4479013362337991471_16150620_2772995216886041548'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:135:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:26:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:93:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:150:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:436:in `_run__4044478501976402178__process_action__2471576802601214463__callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:119:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:41:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:138:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:178:in `block in action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:32:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:12:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:31:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/logger.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:168:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:77:in `method_missing'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered pages/about.html.erb within layouts/application (8.4ms)
+Completed   in 14ms
+
+ActionView::Template::Error (/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:11: syntax error, unexpected $undefined
+');@output_buffer.append= ( ${root_path} );@output_buffer....
+                             ^
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+/home/christian/rails_projects/sample_app/app/views/layouts/_footer.html.erb:15: syntax error, unexpected keyword_end, expecting ')'):
+    8:     </ul>
+    9:   </nav>
+    10: </footer>
+    11: <%= ${root_path} %>
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___4479013362337991471_16150620_2772995216886041548'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-05-23 18:52:51 -0300
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (5.1ms)
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/about.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-05-23 18:53:08 -0300
+  Processing by PagesController#about as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered pages/about.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-23 18:54:38 -0300
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2011-05-23 18:54:42 -0300
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/add" for 127.0.0.1 at 2011-05-23 18:54:47 -0300
+
+ActionController::RoutingError (No route matches "/users/add"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-23 18:54:55 -0300
+
+ActionController::RoutingError (No route matches "/posts"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-05-23 19:00:11 -0300
+
+ActionController::RoutingError (No route matches "/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 19:06:41 -0300
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 19:07:28 -0300
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 19:07:31 -0300
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 19:07:33 -0300
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 19:07:33 -0300
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-23 19:07:33 -0300
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-05-23 19:07:53 -0300
+
+ActionController::RoutingError (No route matches "/home"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:14:22 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:14:58 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:12 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered pages/home.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:15 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered pages/home.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:18 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:26 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/home.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:28 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (2.3ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:30 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (2.7ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered pages/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:15:30 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-23 19:16:34 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/home.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
