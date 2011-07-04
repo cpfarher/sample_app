@@ -1799,3 +1799,139 @@ WARNING: Can't mass-assign protected attributes: password, password_confirmation
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110530224638)
+Migrating to AddEmailUniquenessIndex (20110613231907)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (13.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110530224638)
+Migrating to AddEmailUniquenessIndex (20110613231907)
+Migrating to AddPasswordToUsers (20110704212007)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (16.2ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110704212007')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (128.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (95.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (116.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (108.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110704212007')[0m
+  [1m[35mSQL (94.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110530224638')
+  [1m[36mSQL (99.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110530224638)
+Migrating to AddEmailUniquenessIndex (20110613231907)
+Migrating to AddPasswordToUsers (20110704212007)
+Migrating to AddSaltToUsers (20110704224910)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "users" ADD "salt" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110704224910')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (66.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (100.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (87.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (86.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110704224910')[0m
+  [1m[35mSQL (88.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110530224638')
+  [1m[36mSQL (89.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
+  [1m[35mSQL (88.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704212007')
