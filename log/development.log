@@ -2826,3 +2826,72 @@ Rendered layouts/_header.html.erb (1.3ms)
 Rendered layouts/_footer.html.erb (0.8ms)
 Rendered users/show.html.erb within layouts/application (9.1ms)
 Completed 200 OK in 39ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-07-25 19:43:32 -0300
+
+ActionController::RoutingError (No route matches "/logout"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/user/logout" for 127.0.0.1 at 2011-07-25 19:43:45 -0300
+
+ActionController::RoutingError (No route matches "/user/logout"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2011-07-25 19:43:53 -0300
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"logout"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 55ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=logout):
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/users/logout/1" for 127.0.0.1 at 2011-07-25 19:44:06 -0300
+
+ActionController::RoutingError (No route matches "/users/logout/1"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-25 19:44:12 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered pages/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-07-25 19:44:18 -0300
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (1.0ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.9ms)
+Rendered layouts/_footer.html.erb (2.0ms)
+Rendered users/new.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 110ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-07-25 20:00:47 -0300
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (44.0ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 96ms (Views: 62.9ms | ActiveRecord: 0.2ms)
