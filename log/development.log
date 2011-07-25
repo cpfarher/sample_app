@@ -2688,3 +2688,28 @@ Rendered layouts/_header.html.erb (1.6ms)
 Rendered layouts/_footer.html.erb (1.1ms)
 Rendered users/new.html.erb within layouts/application (23.4ms)
 Completed 200 OK in 101ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-07-25 19:13:40 -0300
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "user"=>{"name"=>"esteban", "email"=>"efornal@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('efornal@hotmail.com')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (2.5ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered users/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 97ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-07-25 19:14:00 -0300
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "user"=>{"name"=>"esteban", "email"=>"efornal@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('efornal@hotmail.com')) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('esteban', 'efornal@hotmail.com', '2011-07-25 22:14:00.248118', '2011-07-25 22:14:00.248118', '1ee0153b0733e28bdf77040002efc3beaa0b3612308318d3f5cbd0bebf146787', 'b136f35fd5c2c05354ad00cdac0550e1822248f2900eb1e1d3a1a2a421360818')[0m
+Completed   in 212ms
+
+ActionView::MissingTemplate (Missing template users/create with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/christian/rails_projects/sample_app/app/views"):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.1ms)
