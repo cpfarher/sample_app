@@ -3439,3 +3439,1060 @@ Rendered layouts/_header.html.erb (7.0ms)
 Rendered layouts/_footer.html.erb (0.9ms)
 Rendered users/new.html.erb within layouts/application (24.2ms)
 Completed 200 OK in 45ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-03 17:03:21 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (353.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (397.5ms)
+Completed 200 OK in 456ms (Views: 455.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-08-03 17:03:26 -0300
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (6.8ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (103.7ms)
+Completed 200 OK in 244ms (Views: 189.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-08-03 17:05:45 -0300
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (9.4ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.9ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 142ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/users" for 127.0.0.1 at 2011-08-03 17:32:14 -0300
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:32:22 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (41.2ms)
+Completed   in 63ms
+
+ActionView::Template::Error (Missing block):
+    1: <h1>Edit user</h1>
+    2: <%= form_for(@user) %>
+    3: <%= form_for(@user) do |f| %>
+    4:   <%= render 'shared/error_messages', :object => f.object %>
+    5:   <div class="field">
+  app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__1650923848967264025_18028060_981086859686968148'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.9ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:32:56 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_users_edit_html_erb__1650923848967264025_20750940_981086859686968148 RAISED /home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...m_for(@user) do |f| f.inspect );@output_buffer.safe_concat('
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:32: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_users_edit_html_erb__1650923848967264025_20750940_981086859686968148(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/edit";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Edit user</h1>
+');@output_buffer.append= ( form_for(@user) do |f| f.inspect );@output_buffer.safe_concat('
+');@output_buffer.append=  form_for(@user) do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( render 'shared/error_messages', :object => f.object );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+	');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password_confirmation, "Confirmation" );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+	');@output_buffer.append= ( f.submit "Update" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.safe_concat('
+<div>
+  ');@output_buffer.append= ( gravatar_for @user );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <a href="http://gravatar.com/emails">change</a>
+</div>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `module_eval'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `compile'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:134:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:26:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:93:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:150:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:436:in `_run__2801877167928107309__process_action__2315484307278544422__callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:119:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:41:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:138:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:178:in `block in action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:32:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:12:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:31:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/logger.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:168:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:77:in `method_missing'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered users/edit.html.erb within layouts/application (1.3ms)
+Completed   in 22ms
+
+ActionView::Template::Error (/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...m_for(@user) do |f| f.inspect );@output_buffer.safe_concat('
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:32: syntax error, unexpected $end, expecting ')'):
+    1: <h1>Edit user</h1>
+    2: <%= form_for(@user) do |f| f.inspect %>
+    3: <%= form_for(@user) do |f| %>
+    4:   <%= render 'shared/error_messages', :object => f.object %>
+    5:   <div class="field">
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:33:08 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+ERROR: compiling _app_views_users_edit_html_erb__1650923848967264025_12670300_981086859686968148 RAISED /home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...orm_for(@user) do |f| f.object);@output_buffer.safe_concat('
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:32: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_users_edit_html_erb__1650923848967264025_12670300_981086859686968148(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/edit";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Edit user</h1>
+');@output_buffer.append= ( form_for(@user) do |f| f.object);@output_buffer.safe_concat('
+');@output_buffer.append=  form_for(@user) do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( render 'shared/error_messages', :object => f.object );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+	');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password_confirmation, "Confirmation" );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+	');@output_buffer.append= ( f.submit "Update" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.safe_concat('
+<div>
+  ');@output_buffer.append= ( gravatar_for @user );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <a href="http://gravatar.com/emails">change</a>
+</div>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `module_eval'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `compile'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:134:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:26:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:93:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:150:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:436:in `_run__2801877167928107309__process_action__2315484307278544422__callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:119:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:41:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:138:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:178:in `block in action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:32:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:12:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:31:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/logger.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:168:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:77:in `method_missing'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered users/edit.html.erb within layouts/application (1.3ms)
+Completed   in 23ms
+
+ActionView::Template::Error (/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...orm_for(@user) do |f| f.object);@output_buffer.safe_concat('
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:32: syntax error, unexpected $end, expecting ')'):
+    1: <h1>Edit user</h1>
+    2: <%= form_for(@user) do |f| f.object%>
+    3: <%= form_for(@user) do |f| %>
+    4:   <%= render 'shared/error_messages', :object => f.object %>
+    5:   <div class="field">
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (34.2ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (51.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:33:10 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_users_edit_html_erb__1650923848967264025_18007060_981086859686968148 RAISED /home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...rm_for(@user) do |f| f.object );@output_buffer.safe_concat('
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:32: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_users_edit_html_erb__1650923848967264025_18007060_981086859686968148(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/edit";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Edit user</h1>
+');@output_buffer.append= ( form_for(@user) do |f| f.object );@output_buffer.safe_concat('
+');@output_buffer.append=  form_for(@user) do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( render 'shared/error_messages', :object => f.object );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+	');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password_confirmation, "Confirmation" );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+	');@output_buffer.append= ( f.submit "Update" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.safe_concat('
+<div>
+  ');@output_buffer.append= ( gravatar_for @user );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <a href="http://gravatar.com/emails">change</a>
+</div>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `module_eval'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `compile'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:134:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:26:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:93:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:150:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:436:in `_run__2801877167928107309__process_action__2315484307278544422__callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:119:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:41:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:138:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:178:in `block in action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:32:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:12:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:31:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/logger.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:168:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:77:in `method_missing'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered users/edit.html.erb within layouts/application (1.4ms)
+Completed   in 27ms
+
+ActionView::Template::Error (/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...rm_for(@user) do |f| f.object );@output_buffer.safe_concat('
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:32: syntax error, unexpected $end, expecting ')'):
+    1: <h1>Edit user</h1>
+    2: <%= form_for(@user) do |f| f.object %>
+    3: <%= form_for(@user) do |f| %>
+    4:   <%= render 'shared/error_messages', :object => f.object %>
+    5:   <div class="field">
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.9ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:33:22 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.8ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 51ms (Views: 32.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:33:32 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_users_edit_html_erb__1650923848967264025_21234100_981086859686968148 RAISED /home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')'
+...(@user) do |f| f.object end --);@output_buffer.append=  form...
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_users_edit_html_erb__1650923848967264025_21234100_981086859686968148(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/edit";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Edit user</h1>
+');@output_buffer.append= ( form_for(@user) do |f| f.object end --);@output_buffer.append=  form_for(@user) do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( render 'shared/error_messages', :object => f.object );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+	');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+	');@output_buffer.append= ( f.label :password_confirmation, "Confirmation" );@output_buffer.safe_concat('<br />
+	');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+	');@output_buffer.append= ( f.submit "Update" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.safe_concat('
+<div>
+  ');@output_buffer.append= ( gravatar_for @user );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <a href="http://gravatar.com/emails">change</a>
+</div>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `module_eval'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:255:in `compile'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:134:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:54:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/template.rb:127:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_view/render/rendering.rb:26:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:93:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:150:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:436:in `_run__2801877167928107309__process_action__2315484307278544422__callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/notifications.rb:52:in `instrument'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/base.rb:119:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/abstract_controller/rendering.rb:41:in `process'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:138:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_controller/metal.rb:178:in `block in action'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:32:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:12:in `cache'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/query_cache.rb:31:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/logger.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:168:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/application.rb:77:in `method_missing'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.6/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/christian/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered users/edit.html.erb within layouts/application (1.4ms)
+Completed   in 61ms
+
+ActionView::Template::Error (/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:2: syntax error, unexpected ')'
+...(@user) do |f| f.object end --);@output_buffer.append=  form...
+...                               ^
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+/home/christian/rails_projects/sample_app/app/views/users/edit.html.erb:31: syntax error, unexpected keyword_end, expecting ')'):
+    1: <h1>Edit user</h1>
+    2: <%= form_for(@user) do |f| f.object end ---%>
+    3: <%= form_for(@user) do |f| %>
+    4:   <%= render 'shared/error_messages', :object => f.object %>
+    5:   <div class="field">
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:33:46 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (37.8ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 86ms (Views: 65.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:33:54 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 52ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:34:00 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 95ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:35:40 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.8ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 85ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:35:55 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/edit.html.erb within layouts/application (65.2ms)
+Completed 200 OK in 86ms (Views: 69.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:36:16 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 45ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:36:38 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (5.2ms)
+Rendered layouts/_footer.html.erb (2.1ms)
+Rendered users/edit.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 87ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:40:52 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 87ms (Views: 31.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:40:54 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (1.9ms)
+Rendered layouts/_stylesheets.html.erb (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (6.8ms)
+Rendered layouts/_footer.html.erb (2.8ms)
+Rendered users/edit.html.erb within layouts/application (116.4ms)
+Completed 200 OK in 175ms (Views: 124.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:43:43 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 50ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:43:45 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 47ms (Views: 28.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 17:46:34 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.1ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 340ms (Views: 32.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-08-03 17:49:52 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (67.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 82ms (Views: 81.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-03 17:49:59 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "session"=>{"email"=>"christian@serfe.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'christian@serfe.com' LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 94ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-08-03 17:50:03 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (26.6ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-03 17:50:24 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "session"=>{"email"=>"efornal@nose.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'efornal@nose.com' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 85ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-08-03 17:50:26 -0300
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.3ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 46ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-08-03 17:50:38 -0300
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "user"=>{"name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com')) LIMIT 1
+Rendered shared/_error_messages.html.erb (2.6ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.9ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 52ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-08-03 17:50:40 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (72.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered sessions/new.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 86ms (Views: 85.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-03 17:50:46 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'test@test.com' LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered sessions/new.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 79ms (Views: 49.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-03 17:51:02 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "session"=>{"email"=>"christian@serfe.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'christian@serfe.com' LIMIT 1
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 33ms
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-08-03 17:51:02 -0300
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 77ms (Views: 17.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2011-08-03 17:51:09 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/edit.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 59ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2011-08-03 18:24:49 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered layouts/_header.html.erb (3.9ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered users/edit.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 73ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-08-03 18:27:26 -0300
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-03 18:27:26 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (32.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 18:27:37 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/edit.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 82ms (Views: 30.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-03 18:39:14 -0300
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 21ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-08-03 18:39:14 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (26.5ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.4ms)
