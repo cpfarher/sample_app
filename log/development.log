@@ -5729,3 +5729,705 @@ Rendered layouts/_header.html.erb (3.9ms)
 Rendered layouts/_footer.html.erb (0.8ms)
 Rendered users/show.html.erb within layouts/application (12.2ms)
 Completed 200 OK in 43ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110530224638)
+Migrating to AddEmailUniquenessIndex (20110613231907)
+Migrating to AddPasswordToUsers (20110704212007)
+Migrating to AddSaltToUsers (20110704224910)
+Migrating to AddAdminToUsers (20110808222612)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110808222612')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f') 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (98.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (145.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (128.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110808222612')[0m
+  [1m[35mSQL (110.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110530224638')
+  [1m[36mSQL (110.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110704224910')[0m
+  [1m[35mSQL (188.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110613231907')
+  [1m[36mSQL (110.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110704212007')[0m
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "admin" = 't', "encrypted_password" = '101fd54032c7ae4b2b2dde5fbc0cc88f80a22066f999657eae5a22888e72125d', "updated_at" = '2011-08-08 22:29:58.085758' WHERE "users"."id" = 1[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (151.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (114.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (119.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (116.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (110.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110808222612')
+  [1m[36mSQL (95.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110530224638')[0m
+  [1m[35mSQL (103.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704224910')
+  [1m[36mSQL (95.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
+  [1m[35mSQL (262.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704212007')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example@railstutorial.org')) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Example User', 'example@railstutorial.org', '2011-08-08 22:31:28.274743', '2011-08-08 22:31:28.274743', '2e40d3dd307bc08beac2eeacb604fbd26fbb49575ac7a02b9922f9fcbad88f25', '92a624152ad020f597e1eeccfdd4f17c415fd0d7e3557aa4631cae21d3199a2b', 'f')[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "admin" = 't', "updated_at" = '2011-08-08 22:31:28.369237' WHERE "users"."id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-1@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Rachelle Padberg', 'example-1@railstutorial.org', '2011-08-08 22:31:28.450060', '2011-08-08 22:31:28.450060', '47f7bd66afdcd2c37750a4849c74da8f1510899253e7920e30cba6eec338d7c5', 'bf8afc99835d0afd373c8143081b8db0bbe1e345e937b26d7a3d048ebe412e0d', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-2@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Maymie Wolf', 'example-2@railstutorial.org', '2011-08-08 22:31:28.527328', '2011-08-08 22:31:28.527328', '47f7bd66afdcd2c37750a4849c74da8f1510899253e7920e30cba6eec338d7c5', 'bf8afc99835d0afd373c8143081b8db0bbe1e345e937b26d7a3d048ebe412e0d', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-3@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Tristin McKenzie', 'example-3@railstutorial.org', '2011-08-08 22:31:28.661805', '2011-08-08 22:31:28.661805', '47f7bd66afdcd2c37750a4849c74da8f1510899253e7920e30cba6eec338d7c5', 'bf8afc99835d0afd373c8143081b8db0bbe1e345e937b26d7a3d048ebe412e0d', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-4@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Quincy Marks', 'example-4@railstutorial.org', '2011-08-08 22:31:28.759667', '2011-08-08 22:31:28.759667', '47f7bd66afdcd2c37750a4849c74da8f1510899253e7920e30cba6eec338d7c5', 'bf8afc99835d0afd373c8143081b8db0bbe1e345e937b26d7a3d048ebe412e0d', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-5@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mona Olson', 'example-5@railstutorial.org', '2011-08-08 22:31:28.870413', '2011-08-08 22:31:28.870413', '47f7bd66afdcd2c37750a4849c74da8f1510899253e7920e30cba6eec338d7c5', 'bf8afc99835d0afd373c8143081b8db0bbe1e345e937b26d7a3d048ebe412e0d', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-6@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Maverick Hartmann', 'example-6@railstutorial.org', '2011-08-08 22:31:28.971499', '2011-08-08 22:31:28.971499', '47f7bd66afdcd2c37750a4849c74da8f1510899253e7920e30cba6eec338d7c5', 'bf8afc99835d0afd373c8143081b8db0bbe1e345e937b26d7a3d048ebe412e0d', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-7@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Berniece Treutel I', 'example-7@railstutorial.org', '2011-08-08 22:31:29.075810', '2011-08-08 22:31:29.075810', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-8@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mrs. Javonte Stroman', 'example-8@railstutorial.org', '2011-08-08 22:31:29.171718', '2011-08-08 22:31:29.171718', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-9@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Reanna Ankunding', 'example-9@railstutorial.org', '2011-08-08 22:31:29.307223', '2011-08-08 22:31:29.307223', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-10@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ms. Aida Lueilwitz', 'example-10@railstutorial.org', '2011-08-08 22:31:29.409788', '2011-08-08 22:31:29.409788', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-11@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dominic Brakus', 'example-11@railstutorial.org', '2011-08-08 22:31:29.494212', '2011-08-08 22:31:29.494212', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-12@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mckenzie Jenkins', 'example-12@railstutorial.org', '2011-08-08 22:31:29.587799', '2011-08-08 22:31:29.587799', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-13@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dr. Keira Collins', 'example-13@railstutorial.org', '2011-08-08 22:31:29.681670', '2011-08-08 22:31:29.681670', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-14@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mariano Huel', 'example-14@railstutorial.org', '2011-08-08 22:31:29.776939', '2011-08-08 22:31:29.776939', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-15@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Arlene Rohan', 'example-15@railstutorial.org', '2011-08-08 22:31:29.904319', '2011-08-08 22:31:29.904319', 'e2620b7ca1fa373faa8d8d222ebb62b09db39b99fd88315360b8186f23bd76f2', '06660732830c8692ace8cef4638cd20c47165bf8c71a99e7c9ca9d39804ea219', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-16@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Cecelia Rohan', 'example-16@railstutorial.org', '2011-08-08 22:31:30.009838', '2011-08-08 22:31:30.009838', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-17@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Hallie Rogahn', 'example-17@railstutorial.org', '2011-08-08 22:31:30.120004', '2011-08-08 22:31:30.120004', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-18@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Alysa Sanford', 'example-18@railstutorial.org', '2011-08-08 22:31:30.216356', '2011-08-08 22:31:30.216356', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-19@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Bernice Kihn', 'example-19@railstutorial.org', '2011-08-08 22:31:30.321326', '2011-08-08 22:31:30.321326', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-20@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Milton Baumbach', 'example-20@railstutorial.org', '2011-08-08 22:31:30.419873', '2011-08-08 22:31:30.419873', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-21@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Modesto Yost', 'example-21@railstutorial.org', '2011-08-08 22:31:30.504986', '2011-08-08 22:31:30.504986', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-22@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Arlie Gusikowski', 'example-22@railstutorial.org', '2011-08-08 22:31:30.592880', '2011-08-08 22:31:30.592880', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-23@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Brielle Heathcote', 'example-23@railstutorial.org', '2011-08-08 22:31:30.682840', '2011-08-08 22:31:30.682840', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-24@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Miss Ophelia Heaney', 'example-24@railstutorial.org', '2011-08-08 22:31:30.772290', '2011-08-08 22:31:30.772290', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-25@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Al Larkin', 'example-25@railstutorial.org', '2011-08-08 22:31:30.890511', '2011-08-08 22:31:30.890511', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-26@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mohammed Mertz', 'example-26@railstutorial.org', '2011-08-08 22:31:30.994140', '2011-08-08 22:31:30.994140', '26b16b5068d90a6d96e3d39aa7a8f71dd1f7bdb439e2f352b95a2f5c6e0043ab', '485bca7b0834ce5a59ce79e5513e354f8fefe1924cd13b4d998e2edd6554ab1a', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-27@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Angel Monahan', 'example-27@railstutorial.org', '2011-08-08 22:31:31.124631', '2011-08-08 22:31:31.124631', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-28@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Camille Harris', 'example-28@railstutorial.org', '2011-08-08 22:31:31.217566', '2011-08-08 22:31:31.217566', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-29@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Lavonne Murphy Sr.', 'example-29@railstutorial.org', '2011-08-08 22:31:31.316235', '2011-08-08 22:31:31.316235', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-30@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Daphnee Schneider', 'example-30@railstutorial.org', '2011-08-08 22:31:31.406916', '2011-08-08 22:31:31.406916', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-31@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Rudy Berge', 'example-31@railstutorial.org', '2011-08-08 22:31:31.494298', '2011-08-08 22:31:31.494298', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-32@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ezra Moen DVM', 'example-32@railstutorial.org', '2011-08-08 22:31:31.583052', '2011-08-08 22:31:31.583052', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-33@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Tom Deckow', 'example-33@railstutorial.org', '2011-08-08 22:31:31.700334', '2011-08-08 22:31:31.700334', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-34@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Armando Weissnat', 'example-34@railstutorial.org', '2011-08-08 22:31:31.806231', '2011-08-08 22:31:31.806231', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-35@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Macey Schulist', 'example-35@railstutorial.org', '2011-08-08 22:31:31.894062', '2011-08-08 22:31:31.894062', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-36@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Donnell Mohr', 'example-36@railstutorial.org', '2011-08-08 22:31:31.984549', '2011-08-08 22:31:31.984549', '03742d807e80c49eb24f6100e2b697da3265f9d659e183f2fbe160449e7068ee', 'b32469be4512b566f0d76b3d3b1d2d795ecdafade4c2f9dac62b6193431d01bd', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-37@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Iva Streich', 'example-37@railstutorial.org', '2011-08-08 22:31:32.085346', '2011-08-08 22:31:32.085346', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-38@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Micah Renner', 'example-38@railstutorial.org', '2011-08-08 22:31:32.173290', '2011-08-08 22:31:32.173290', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-39@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Daphne Murazik', 'example-39@railstutorial.org', '2011-08-08 22:31:32.304207', '2011-08-08 22:31:32.304207', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-40@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Cleta Johnston', 'example-40@railstutorial.org', '2011-08-08 22:31:32.406479', '2011-08-08 22:31:32.406479', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-41@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Osborne Kozey', 'example-41@railstutorial.org', '2011-08-08 22:31:32.518021', '2011-08-08 22:31:32.518021', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-42@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Katlynn Stokes', 'example-42@railstutorial.org', '2011-08-08 22:31:32.617689', '2011-08-08 22:31:32.617689', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-43@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mollie Friesen', 'example-43@railstutorial.org', '2011-08-08 22:31:32.716837', '2011-08-08 22:31:32.716837', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-44@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Savanah Yost', 'example-44@railstutorial.org', '2011-08-08 22:31:32.796054', '2011-08-08 22:31:32.796054', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-45@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ms. Kaya Kessler', 'example-45@railstutorial.org', '2011-08-08 22:31:32.884167', '2011-08-08 22:31:32.884167', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-46@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jett Torphy I', 'example-46@railstutorial.org', '2011-08-08 22:31:32.973337', '2011-08-08 22:31:32.973337', '91fb37190f98ea942c120372ed10516661ba19673fd1e89cf2b138a01e33cb12', '1657451c77a6a17c4c8f2304b6cfbe663c2e09d14c41d64da4e0bd8387708abc', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-47@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Gino Lynch', 'example-47@railstutorial.org', '2011-08-08 22:31:33.062439', '2011-08-08 22:31:33.062439', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-48@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Clarabelle Johnson', 'example-48@railstutorial.org', '2011-08-08 22:31:33.150247', '2011-08-08 22:31:33.150247', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-49@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Queenie Stroman', 'example-49@railstutorial.org', '2011-08-08 22:31:33.270857', '2011-08-08 22:31:33.270857', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-50@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Leif Lebsack', 'example-50@railstutorial.org', '2011-08-08 22:31:33.406543', '2011-08-08 22:31:33.406543', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-51@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Sheila Blick', 'example-51@railstutorial.org', '2011-08-08 22:31:33.526058', '2011-08-08 22:31:33.526058', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-52@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Tyrese Dietrich', 'example-52@railstutorial.org', '2011-08-08 22:31:33.618290', '2011-08-08 22:31:33.618290', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-53@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Everardo Funk', 'example-53@railstutorial.org', '2011-08-08 22:31:33.717281', '2011-08-08 22:31:33.717281', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-54@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jean McDermott', 'example-54@railstutorial.org', '2011-08-08 22:31:33.808359', '2011-08-08 22:31:33.808359', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-55@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Malcolm Effertz', 'example-55@railstutorial.org', '2011-08-08 22:31:33.895880', '2011-08-08 22:31:33.895880', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-56@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Favian Gleason', 'example-56@railstutorial.org', '2011-08-08 22:31:33.984441', '2011-08-08 22:31:33.984441', '434e4c2fd044cb87e37b93f3475358ba12eccc1bd417f344b29e6c6119f8ddb0', '7d4c2f57a8d7597eca9095bb96ea23f8a8f34ce63eecb699bdf4665a8ab47226', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-57@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Madison Trantow', 'example-57@railstutorial.org', '2011-08-08 22:31:34.073863', '2011-08-08 22:31:34.073863', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-58@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Vernie D''Amore', 'example-58@railstutorial.org', '2011-08-08 22:31:34.174992', '2011-08-08 22:31:34.174992', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-59@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Leonor Kovacek', 'example-59@railstutorial.org', '2011-08-08 22:31:34.262085', '2011-08-08 22:31:34.262085', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-60@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Foster Bashirian', 'example-60@railstutorial.org', '2011-08-08 22:31:34.353648', '2011-08-08 22:31:34.353648', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-61@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Miss Eldora Hudson', 'example-61@railstutorial.org', '2011-08-08 22:31:34.472551', '2011-08-08 22:31:34.472551', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-62@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Oma Goodwin', 'example-62@railstutorial.org', '2011-08-08 22:31:34.574971', '2011-08-08 22:31:34.574971', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-63@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mrs. Rylan Yundt', 'example-63@railstutorial.org', '2011-08-08 22:31:34.724355', '2011-08-08 22:31:34.724355', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-64@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Calista Brekke', 'example-64@railstutorial.org', '2011-08-08 22:31:34.819739', '2011-08-08 22:31:34.819739', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-65@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Graham Herzog', 'example-65@railstutorial.org', '2011-08-08 22:31:34.919764', '2011-08-08 22:31:34.919764', 'a31f02c6acb18cc724ac57fccaf49b6638bca8e9622bcbf1e20ffd97be2f636d', '55fb5e7254d9044bd878970633b42fc458f7f353da2ffc41d4e7a880f10499f7', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-66@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Nikita Haag', 'example-66@railstutorial.org', '2011-08-08 22:31:35.009196', '2011-08-08 22:31:35.009196', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-67@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Claudine Bechtelar', 'example-67@railstutorial.org', '2011-08-08 22:31:35.096920', '2011-08-08 22:31:35.096920', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-68@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ramiro Rosenbaum', 'example-68@railstutorial.org', '2011-08-08 22:31:35.187304', '2011-08-08 22:31:35.187304', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-69@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jazlyn Koelpin', 'example-69@railstutorial.org', '2011-08-08 22:31:35.275131', '2011-08-08 22:31:35.275131', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-70@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Percival King', 'example-70@railstutorial.org', '2011-08-08 22:31:35.376277', '2011-08-08 22:31:35.376277', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-71@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Novella Huel', 'example-71@railstutorial.org', '2011-08-08 22:31:35.476243', '2011-08-08 22:31:35.476243', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-72@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Joseph Funk', 'example-72@railstutorial.org', '2011-08-08 22:31:35.564329', '2011-08-08 22:31:35.564329', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-73@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Veronica Ritchie II', 'example-73@railstutorial.org', '2011-08-08 22:31:35.652838', '2011-08-08 22:31:35.652838', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-74@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Kari Murphy', 'example-74@railstutorial.org', '2011-08-08 22:31:35.753766', '2011-08-08 22:31:35.753766', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-75@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dr. Magdalen Bashirian', 'example-75@railstutorial.org', '2011-08-08 22:31:35.881428', '2011-08-08 22:31:35.881428', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-76@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Giovani Crooks', 'example-76@railstutorial.org', '2011-08-08 22:31:35.976097', '2011-08-08 22:31:35.976097', '5699a661b65efd94f4294ee4ffdeac881c8435c447c1806674b93d4b38a01c8d', '805b7fe05639386eeb3f1db3edb43db4f53a1b844b9a4539dd13a7129ecff8a9', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-77@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Russ Lockman', 'example-77@railstutorial.org', '2011-08-08 22:31:36.111421', '2011-08-08 22:31:36.111421', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-78@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ms. Brayan Stanton', 'example-78@railstutorial.org', '2011-08-08 22:31:36.219556', '2011-08-08 22:31:36.219556', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-79@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dane Mayer', 'example-79@railstutorial.org', '2011-08-08 22:31:36.329471', '2011-08-08 22:31:36.329471', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-80@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jewell Heidenreich', 'example-80@railstutorial.org', '2011-08-08 22:31:36.435925', '2011-08-08 22:31:36.435925', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-81@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Antonina Gulgowski', 'example-81@railstutorial.org', '2011-08-08 22:31:36.530876', '2011-08-08 22:31:36.530876', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-82@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jailyn Mann', 'example-82@railstutorial.org', '2011-08-08 22:31:36.636282', '2011-08-08 22:31:36.636282', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-83@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Demetris Thompson', 'example-83@railstutorial.org', '2011-08-08 22:31:36.729976', '2011-08-08 22:31:36.729976', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-84@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Stephania DuBuque', 'example-84@railstutorial.org', '2011-08-08 22:31:36.847291', '2011-08-08 22:31:36.847291', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-85@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Miss Katherine Heidenreich', 'example-85@railstutorial.org', '2011-08-08 22:31:36.969464', '2011-08-08 22:31:36.969464', '3bbe863e7ed4d5dd50dbedf75e2c629dbf7f00af8ab6530ee4c4025690bde24b', '816990d7a0d9b184449b96551fc781cd4c1c4c220b378c11c42d253205a1e517', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-86@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dell Schulist Sr.', 'example-86@railstutorial.org', '2011-08-08 22:31:37.091871', '2011-08-08 22:31:37.091871', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-87@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dr. Frederick Kreiger', 'example-87@railstutorial.org', '2011-08-08 22:31:37.246363', '2011-08-08 22:31:37.246363', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-88@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Caitlyn Farrell', 'example-88@railstutorial.org', '2011-08-08 22:31:37.369743', '2011-08-08 22:31:37.369743', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-89@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Salvatore Leannon II', 'example-89@railstutorial.org', '2011-08-08 22:31:37.491983', '2011-08-08 22:31:37.491983', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-90@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Nyah Hessel', 'example-90@railstutorial.org', '2011-08-08 22:31:37.614807', '2011-08-08 22:31:37.614807', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-91@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Andrew Mayert', 'example-91@railstutorial.org', '2011-08-08 22:31:37.721582', '2011-08-08 22:31:37.721582', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-92@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ms. Taylor Bergnaum', 'example-92@railstutorial.org', '2011-08-08 22:31:37.832312', '2011-08-08 22:31:37.832312', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-93@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Yazmin Jones', 'example-93@railstutorial.org', '2011-08-08 22:31:37.933231', '2011-08-08 22:31:37.933231', '2b03a11b0f052e6944f6fbb8539217baee2c12d83c4c327fb8948b9ecd2babd1', 'f509e49aa3f2301974bd4e27cdea3406c4ce118f3df9d393ddcf8683d1590c0f', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-94@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Leopold Fisher', 'example-94@railstutorial.org', '2011-08-08 22:31:38.016982', '2011-08-08 22:31:38.016982', '8dc168b892544fd1fabee48d2f854ab298bb4b78d2c1f365f89674bac237ec4e', 'fd52d6ba92e5f8436a6deda1b557f9dce328e8f27775694630f7140b4fdf1f03', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-95@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Candelario Bernhard', 'example-95@railstutorial.org', '2011-08-08 22:31:38.105774', '2011-08-08 22:31:38.105774', '8dc168b892544fd1fabee48d2f854ab298bb4b78d2c1f365f89674bac237ec4e', 'fd52d6ba92e5f8436a6deda1b557f9dce328e8f27775694630f7140b4fdf1f03', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-96@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Josiane Pouros', 'example-96@railstutorial.org', '2011-08-08 22:31:38.199779', '2011-08-08 22:31:38.199779', '8dc168b892544fd1fabee48d2f854ab298bb4b78d2c1f365f89674bac237ec4e', 'fd52d6ba92e5f8436a6deda1b557f9dce328e8f27775694630f7140b4fdf1f03', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-97@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Sylvan Schultz', 'example-97@railstutorial.org', '2011-08-08 22:31:38.299143', '2011-08-08 22:31:38.299143', '8dc168b892544fd1fabee48d2f854ab298bb4b78d2c1f365f89674bac237ec4e', 'fd52d6ba92e5f8436a6deda1b557f9dce328e8f27775694630f7140b4fdf1f03', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-98@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Christina Gibson III', 'example-98@railstutorial.org', '2011-08-08 22:31:38.398822', '2011-08-08 22:31:38.398822', '8dc168b892544fd1fabee48d2f854ab298bb4b78d2c1f365f89674bac237ec4e', 'fd52d6ba92e5f8436a6deda1b557f9dce328e8f27775694630f7140b4fdf1f03', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-99@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mike Schaefer', 'example-99@railstutorial.org', '2011-08-08 22:31:38.571722', '2011-08-08 22:31:38.571722', '8dc168b892544fd1fabee48d2f854ab298bb4b78d2c1f365f89674bac237ec4e', 'fd52d6ba92e5f8436a6deda1b557f9dce328e8f27775694630f7140b4fdf1f03', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:43:05 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 29ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-08-08 19:43:05 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (74.7ms)
+Rendered layouts/_footer.html.erb (2.0ms)
+Rendered sessions/new.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 93ms (Views: 91.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-08 19:43:30 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'example@railstutorial.org' LIMIT 1[0m
+Redirected to http://localhost:3000/users?page=1
+Completed 302 Found in 45ms
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:43:30 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered users/index.html.erb within layouts/application (22.9ms)
+Completed   in 91ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    3: <%= will_paginate %>
+    4: 
+    5: <ul class="users">
+    6:   <%= render @user %>
+    7: </ul>
+    8: <%= will_paginate %>
+  app/views/users/index.html.erb:6:in `_app_views_users_index_html_erb___2009024893366331342_31410800_398263662968966422'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:45:57 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" LIMIT 30 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (38.3ms)
+Completed   in 122ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000003bed6f8>:0x00000003be9d78>):
+    3: <%= will_paginate %>
+    4: 
+    5: <ul class="users">
+    6:   <%= render user %>
+    7: </ul>
+    8: <%= will_paginate %>
+  app/views/users/index.html.erb:6:in `_app_views_users_index_html_erb___2009024893366331342_31408000_398263662968966422'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.2ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (50.5ms)
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:46:30 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered users/index.html.erb within layouts/application (48.0ms)
+Completed   in 202ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    3: <%= will_paginate %>
+    4: 
+    5: <ul class="users">
+    6:   <%= render @user %>
+    7: </ul>
+    8: 
+    9: <%= will_paginate %>
+  app/views/users/index.html.erb:6:in `_app_views_users_index_html_erb___642300849666069273_25605460__2174077241524103513'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.4ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.1ms)
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (141.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (108.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (146.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (117.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (120.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110808222612')
+  [1m[36mSQL (110.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110530224638')[0m
+  [1m[35mSQL (99.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704224910')
+  [1m[36mSQL (110.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
+  [1m[35mSQL (99.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704212007')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example@railstutorial.org')) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Example User', 'example@railstutorial.org', '2011-08-08 22:47:08.110441', '2011-08-08 22:47:08.110441', 'da060c2e945180b0c44a4a8414c67df5c1f5bc479e7e6e41aed7efcfca70be43', 'a4a75cb0f11542500e3875af3a6b09b51ef954208f474cd87a28ca6f057207a4', 'f')[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "admin" = 't', "updated_at" = '2011-08-08 22:47:08.271239' WHERE "users"."id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-1@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Justyn Kreiger', 'example-1@railstutorial.org', '2011-08-08 22:47:08.375231', '2011-08-08 22:47:08.375231', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-2@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Trinity Muller DDS', 'example-2@railstutorial.org', '2011-08-08 22:47:08.484728', '2011-08-08 22:47:08.484728', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-3@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Bernard Bednar', 'example-3@railstutorial.org', '2011-08-08 22:47:08.597321', '2011-08-08 22:47:08.597321', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-4@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Blanche Luettgen', 'example-4@railstutorial.org', '2011-08-08 22:47:08.706897', '2011-08-08 22:47:08.706897', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-5@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Luigi Mills', 'example-5@railstutorial.org', '2011-08-08 22:47:08.796342', '2011-08-08 22:47:08.796342', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-6@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dax Thompson MD', 'example-6@railstutorial.org', '2011-08-08 22:47:08.884493', '2011-08-08 22:47:08.884493', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-7@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Gladyce Marquardt', 'example-7@railstutorial.org', '2011-08-08 22:47:08.973781', '2011-08-08 22:47:08.973781', '5bb6397ab5e7703483142d23f1e1ec2d95b5bb23f3d538e8126769b03af3d344', '3cd34036a42d40456f17e8c2f7ee4f5c89f1b3c061eca1ce54a66d952665fddf', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-8@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Macie Price', 'example-8@railstutorial.org', '2011-08-08 22:47:09.084845', '2011-08-08 22:47:09.084845', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-9@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Eldridge Ortiz', 'example-9@railstutorial.org', '2011-08-08 22:47:09.203776', '2011-08-08 22:47:09.203776', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-10@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Savannah Hettinger', 'example-10@railstutorial.org', '2011-08-08 22:47:09.295802', '2011-08-08 22:47:09.295802', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-11@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Everett Kessler', 'example-11@railstutorial.org', '2011-08-08 22:47:09.463548', '2011-08-08 22:47:09.463548', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-12@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dr. Laverne Breitenberg', 'example-12@railstutorial.org', '2011-08-08 22:47:09.540422', '2011-08-08 22:47:09.540422', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-13@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mariam Toy', 'example-13@railstutorial.org', '2011-08-08 22:47:09.652414', '2011-08-08 22:47:09.652414', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-14@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Josephine Schaden', 'example-14@railstutorial.org', '2011-08-08 22:47:09.740328', '2011-08-08 22:47:09.740328', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-15@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Pinkie Lemke', 'example-15@railstutorial.org', '2011-08-08 22:47:09.892011', '2011-08-08 22:47:09.892011', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-16@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Karine Berge I', 'example-16@railstutorial.org', '2011-08-08 22:47:09.984610', '2011-08-08 22:47:09.984610', '7eaac44a2c70cc50ae48524fec35706f5fa99d5189c4899f0e84403a336a3be7', 'ce8de801146145c6e36630abcc0513bf0374176747010604251dbb5a1a6bc368', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-17@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Flavio Torphy', 'example-17@railstutorial.org', '2011-08-08 22:47:10.072276', '2011-08-08 22:47:10.072276', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-18@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Erling Gaylord', 'example-18@railstutorial.org', '2011-08-08 22:47:10.162516', '2011-08-08 22:47:10.162516', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-19@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Bonnie Bernhard', 'example-19@railstutorial.org', '2011-08-08 22:47:10.251352', '2011-08-08 22:47:10.251352', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-20@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Amiya Ernser', 'example-20@railstutorial.org', '2011-08-08 22:47:10.340569', '2011-08-08 22:47:10.340569', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-21@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ephraim Klein', 'example-21@railstutorial.org', '2011-08-08 22:47:10.452524', '2011-08-08 22:47:10.452524', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-22@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Gladys Greenfelder', 'example-22@railstutorial.org', '2011-08-08 22:47:10.540731', '2011-08-08 22:47:10.540731', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-23@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ashly Zemlak', 'example-23@railstutorial.org', '2011-08-08 22:47:10.652277', '2011-08-08 22:47:10.652277', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-24@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Leora Orn', 'example-24@railstutorial.org', '2011-08-08 22:47:10.729386', '2011-08-08 22:47:10.729386', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-25@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Izaiah Huel', 'example-25@railstutorial.org', '2011-08-08 22:47:10.866545', '2011-08-08 22:47:10.866545', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-26@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Bria Anderson', 'example-26@railstutorial.org', '2011-08-08 22:47:10.968423', '2011-08-08 22:47:10.968423', '9aaddb64bd732f11d47457846f606457017f40a0d65a30d628849c2fde4443fc', 'cc8f154547113360b6cf35a68722c8e7de2c7ffa3906a45605dcd6043927a0ed', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-27@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ephraim Prosacco', 'example-27@railstutorial.org', '2011-08-08 22:47:11.105745', '2011-08-08 22:47:11.105745', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-28@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Philip Schultz', 'example-28@railstutorial.org', '2011-08-08 22:47:11.218261', '2011-08-08 22:47:11.218261', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-29@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Weldon Schinner', 'example-29@railstutorial.org', '2011-08-08 22:47:11.329017', '2011-08-08 22:47:11.329017', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-30@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Katelynn Okuneva', 'example-30@railstutorial.org', '2011-08-08 22:47:11.423940', '2011-08-08 22:47:11.423940', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-31@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ike Smitham MD', 'example-31@railstutorial.org', '2011-08-08 22:47:11.524147', '2011-08-08 22:47:11.524147', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-32@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Katelynn Macejkovic', 'example-32@railstutorial.org', '2011-08-08 22:47:11.624113', '2011-08-08 22:47:11.624113', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-33@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Candice Lockman', 'example-33@railstutorial.org', '2011-08-08 22:47:11.762996', '2011-08-08 22:47:11.762996', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-34@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Eloy Heaney', 'example-34@railstutorial.org', '2011-08-08 22:47:11.876472', '2011-08-08 22:47:11.876472', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-35@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Carlie Schoen', 'example-35@railstutorial.org', '2011-08-08 22:47:11.986528', '2011-08-08 22:47:11.986528', '2e02491851ffb7eff20108ec7ccc1ff03d38dfb3ef753a7cccf800eaf1d2ee5b', '635443cafe64d12721ad2b92bf9e2fefd11caf77c40cad193dec863931091e60', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-36@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Miss Jessika Ward', 'example-36@railstutorial.org', '2011-08-08 22:47:12.079737', '2011-08-08 22:47:12.079737', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-37@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Leonor Roberts', 'example-37@railstutorial.org', '2011-08-08 22:47:12.176680', '2011-08-08 22:47:12.176680', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-38@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Doyle Senger', 'example-38@railstutorial.org', '2011-08-08 22:47:12.298593', '2011-08-08 22:47:12.298593', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-39@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Eduardo Roob', 'example-39@railstutorial.org', '2011-08-08 22:47:12.450960', '2011-08-08 22:47:12.450960', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-40@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Bartholome Blick', 'example-40@railstutorial.org', '2011-08-08 22:47:12.554478', '2011-08-08 22:47:12.554478', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-41@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Justine Parisian', 'example-41@railstutorial.org', '2011-08-08 22:47:12.665379', '2011-08-08 22:47:12.665379', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-42@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mayra Koelpin', 'example-42@railstutorial.org', '2011-08-08 22:47:12.775527', '2011-08-08 22:47:12.775527', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-43@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Raphael O''Conner DDS', 'example-43@railstutorial.org', '2011-08-08 22:47:12.875262', '2011-08-08 22:47:12.875262', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-44@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mrs. Dylan Corkery', 'example-44@railstutorial.org', '2011-08-08 22:47:12.978564', '2011-08-08 22:47:12.978564', 'b5e840255c60f4ccad25322b2920b6deee2039fb7f3305afae6ab31776f50444', 'd2d2fefdd4c05922ff9d5cb525fc1c9e649e89e326f1bdd3b38b79ad7e8bbc23', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-45@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ole Zieme', 'example-45@railstutorial.org', '2011-08-08 22:47:13.091552', '2011-08-08 22:47:13.091552', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-46@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Lempi Aufderhar', 'example-46@railstutorial.org', '2011-08-08 22:47:13.187824', '2011-08-08 22:47:13.187824', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-47@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Reyna Terry', 'example-47@railstutorial.org', '2011-08-08 22:47:13.302211', '2011-08-08 22:47:13.302211', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-48@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Henriette Frami', 'example-48@railstutorial.org', '2011-08-08 22:47:13.402302', '2011-08-08 22:47:13.402302', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-49@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Catalina Fritsch', 'example-49@railstutorial.org', '2011-08-08 22:47:13.545675', '2011-08-08 22:47:13.545675', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-50@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Miss Dudley Denesik', 'example-50@railstutorial.org', '2011-08-08 22:47:13.647779', '2011-08-08 22:47:13.647779', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-51@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Stanley Nicolas', 'example-51@railstutorial.org', '2011-08-08 22:47:13.780607', '2011-08-08 22:47:13.780607', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-52@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Garth Schamberger', 'example-52@railstutorial.org', '2011-08-08 22:47:13.896245', '2011-08-08 22:47:13.896245', '2dc06a909d56986172c84dc569b0f8833767d3225d5cc6c3c2b46866fb69e43c', 'c63d0d54cf9ff889e239ab86fd33e4f83aa22335115d16989a95b45d10b7c031', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-53@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mrs. Armani Kirlin', 'example-53@railstutorial.org', '2011-08-08 22:47:14.007242', '2011-08-08 22:47:14.007242', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-54@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Dr. Elva Gibson', 'example-54@railstutorial.org', '2011-08-08 22:47:14.118388', '2011-08-08 22:47:14.118388', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-55@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jamel Moore', 'example-55@railstutorial.org', '2011-08-08 22:47:14.229565', '2011-08-08 22:47:14.229565', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-56@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Sabrina Stiedemann', 'example-56@railstutorial.org', '2011-08-08 22:47:14.325750', '2011-08-08 22:47:14.325750', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-57@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Arnulfo Klein', 'example-57@railstutorial.org', '2011-08-08 22:47:14.424508', '2011-08-08 22:47:14.424508', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-58@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ethelyn Brakus', 'example-58@railstutorial.org', '2011-08-08 22:47:14.525149', '2011-08-08 22:47:14.525149', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-59@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Scotty Reilly', 'example-59@railstutorial.org', '2011-08-08 22:47:14.614556', '2011-08-08 22:47:14.614556', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-60@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Leanne Roob', 'example-60@railstutorial.org', '2011-08-08 22:47:14.702772', '2011-08-08 22:47:14.702772', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-61@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ricky McGlynn', 'example-61@railstutorial.org', '2011-08-08 22:47:14.846881', '2011-08-08 22:47:14.846881', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-62@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Braulio Schulist', 'example-62@railstutorial.org', '2011-08-08 22:47:14.973668', '2011-08-08 22:47:14.973668', 'bb32fa1454cf69d0425ebdb467e8242999a1f0389adae307019234c947a2cca7', 'b47f4c1f063de0f3e3d8fa4c5a1dce294e3c784248f44c7e86ed4fd8715cbf1e', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-63@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Davonte Gleichner', 'example-63@railstutorial.org', '2011-08-08 22:47:15.124102', '2011-08-08 22:47:15.124102', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-64@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Meta Heidenreich', 'example-64@railstutorial.org', '2011-08-08 22:47:15.240748', '2011-08-08 22:47:15.240748', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-65@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Arjun Larson', 'example-65@railstutorial.org', '2011-08-08 22:47:15.337901', '2011-08-08 22:47:15.337901', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-66@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Johnpaul Lindgren', 'example-66@railstutorial.org', '2011-08-08 22:47:15.440816', '2011-08-08 22:47:15.440816', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-67@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Osbaldo Borer', 'example-67@railstutorial.org', '2011-08-08 22:47:15.537411', '2011-08-08 22:47:15.537411', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-68@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Cecil Beier', 'example-68@railstutorial.org', '2011-08-08 22:47:15.637657', '2011-08-08 22:47:15.637657', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-69@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Collin Orn', 'example-69@railstutorial.org', '2011-08-08 22:47:15.737599', '2011-08-08 22:47:15.737599', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-70@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Neil Botsford', 'example-70@railstutorial.org', '2011-08-08 22:47:15.841143', '2011-08-08 22:47:15.841143', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-71@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Hertha McLaughlin', 'example-71@railstutorial.org', '2011-08-08 22:47:15.951203', '2011-08-08 22:47:15.951203', 'a43ac951e08832c3084d32190807b032cd513c5910a4f16878a1153ddfea84c9', '47eb56a906554b2a70fef92a46846b82cf5eea328b2385587ff05f46a5912148', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-72@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Coralie Douglas', 'example-72@railstutorial.org', '2011-08-08 22:47:16.036332', '2011-08-08 22:47:16.036332', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-73@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Mr. Maynard Schroeder', 'example-73@railstutorial.org', '2011-08-08 22:47:16.152225', '2011-08-08 22:47:16.152225', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-74@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Deshawn Stark', 'example-74@railstutorial.org', '2011-08-08 22:47:16.274974', '2011-08-08 22:47:16.274974', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-75@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Meaghan Adams', 'example-75@railstutorial.org', '2011-08-08 22:47:16.426858', '2011-08-08 22:47:16.426858', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-76@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jaron Kuvalis', 'example-76@railstutorial.org', '2011-08-08 22:47:16.551289', '2011-08-08 22:47:16.551289', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-77@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Rory DuBuque', 'example-77@railstutorial.org', '2011-08-08 22:47:16.677165', '2011-08-08 22:47:16.677165', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-78@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Eden Schamberger', 'example-78@railstutorial.org', '2011-08-08 22:47:16.790740', '2011-08-08 22:47:16.790740', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-79@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Howell Altenwerth', 'example-79@railstutorial.org', '2011-08-08 22:47:16.903067', '2011-08-08 22:47:16.903067', 'b768a2ba753099ea7adf5f888f0b4896831cfecfc77debcf291759a1f8bd623f', '74bd8f99257e8adb9fdd65fd0afc57f13d20848ccd48471b3df59332fc7c3a13', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-80@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Estrella Johnson', 'example-80@railstutorial.org', '2011-08-08 22:47:17.014255', '2011-08-08 22:47:17.014255', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-81@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Kevon DuBuque', 'example-81@railstutorial.org', '2011-08-08 22:47:17.125389', '2011-08-08 22:47:17.125389', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-82@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Elsie Schmeler', 'example-82@railstutorial.org', '2011-08-08 22:47:17.236689', '2011-08-08 22:47:17.236689', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-83@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Armand Corwin DDS', 'example-83@railstutorial.org', '2011-08-08 22:47:17.347585', '2011-08-08 22:47:17.347585', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-84@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Gunner Morissette', 'example-84@railstutorial.org', '2011-08-08 22:47:17.470504', '2011-08-08 22:47:17.470504', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-85@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Magnus Denesik', 'example-85@railstutorial.org', '2011-08-08 22:47:17.591285', '2011-08-08 22:47:17.591285', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-86@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Moshe Kshlerin', 'example-86@railstutorial.org', '2011-08-08 22:47:17.714577', '2011-08-08 22:47:17.714577', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-87@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ima Schroeder I', 'example-87@railstutorial.org', '2011-08-08 22:47:17.856877', '2011-08-08 22:47:17.856877', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-88@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Darlene Braun', 'example-88@railstutorial.org', '2011-08-08 22:47:17.974194', '2011-08-08 22:47:17.974194', 'febdae8d1db6ba13eab2a166bce9c29e3d68f52173b1eb69ab0b99035078eed7', 'a961aa0196babc4af60d3cebcbdb9e4829767d0ff1ce69fde7cee40a3ca5ecee', 'f')
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-89@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Seamus Kuhn', 'example-89@railstutorial.org', '2011-08-08 22:47:18.081284', '2011-08-08 22:47:18.081284', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-90@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Eryn Larson', 'example-90@railstutorial.org', '2011-08-08 22:47:18.222180', '2011-08-08 22:47:18.222180', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-91@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ursula Mohr', 'example-91@railstutorial.org', '2011-08-08 22:47:18.314206', '2011-08-08 22:47:18.314206', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-92@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Trenton Bernier', 'example-92@railstutorial.org', '2011-08-08 22:47:18.414474', '2011-08-08 22:47:18.414474', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-93@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Rodrigo Buckridge', 'example-93@railstutorial.org', '2011-08-08 22:47:18.513198', '2011-08-08 22:47:18.513198', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-94@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Ayana Balistreri', 'example-94@railstutorial.org', '2011-08-08 22:47:18.624746', '2011-08-08 22:47:18.624746', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-95@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Kelvin Champlin', 'example-95@railstutorial.org', '2011-08-08 22:47:18.746591', '2011-08-08 22:47:18.746591', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-96@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Milan Kunze', 'example-96@railstutorial.org', '2011-08-08 22:47:18.858985', '2011-08-08 22:47:18.858985', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-97@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Jean Hoppe', 'example-97@railstutorial.org', '2011-08-08 22:47:18.970192', '2011-08-08 22:47:18.970192', 'c571af36a9724604e12483936e5227a5e822e083be7b419566f5c980c8c7114c', 'eeefbd236219c90f3bb85e5b8bfdb3640f1008148173393db1ccbfe4c26cb398', 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-98@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Onie Watsica', 'example-98@railstutorial.org', '2011-08-08 22:47:19.081320', '2011-08-08 22:47:19.081320', '4a4f41c14884750b5f80995b74d3dedff089fd0a65ade91df638a7a4c3e261a7', '37cf6198e446c819c9adff7fa90e80134178b96be6534f16c1bfad2c8822a75a', 'f')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('example-99@railstutorial.org')) LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('Gregg Rodriguez', 'example-99@railstutorial.org', '2011-08-08 22:47:19.214840', '2011-08-08 22:47:19.214840', '4a4f41c14884750b5f80995b74d3dedff089fd0a65ade91df638a7a4c3e261a7', '37cf6198e446c819c9adff7fa90e80134178b96be6534f16c1bfad2c8822a75a', 'f')
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:47:23 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 83ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-08-08 19:47:24 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (69.0ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered sessions/new.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-08 19:47:47 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htP84d51U1F5aC4az3Dcc53IgBa2QXcx8mS4myZSzI8=", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'example@railstutorial.org' LIMIT 1
+Redirected to http://localhost:3000/users?page=1
+Completed 302 Found in 39ms
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:47:47 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" LIMIT 30 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed   in 77ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    3: <%= will_paginate %>
+    4: 
+    5: <ul class="users">
+    6:   <%= render @user %>
+    7: </ul>
+    8: 
+    9: <%= will_paginate %>
+  app/views/users/index.html.erb:6:in `_app_views_users_index_html_erb___642300849666069273_25916220__2174077241524103513'
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.1ms)
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.7ms)
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2011-08-08 19:50:25 -0300
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered users/_user.html.erb (71.3ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (11.3ms)
+Rendered users/index.html.erb within layouts/application (107.2ms)
+Completed 200 OK in 262ms (Views: 111.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/4" for 127.0.0.1 at 2011-08-08 19:50:47 -0300
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+
+Rendered /home/christian/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
