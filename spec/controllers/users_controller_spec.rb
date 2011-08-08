@@ -3,13 +3,13 @@ require 'spec_helper'
 describe UsersController do
   render_views
 
-	describe "GET 'show'" do
+  describe "GET 'show'" do
 
     before(:each) do
       @user = Factory(:user)
     end
 
-		it "should be successful" do
+    it "should be successful" do
       get :show, :id => @user
       response.should be_success
     end
@@ -19,7 +19,7 @@ describe UsersController do
       assigns(:user).should == @user
     end
 
-		it "should have the right title" do
+    it "should have the right title" do
       get :show, :id => @user
       response.should have_selector("title", :content => @user.name)
     end
@@ -46,14 +46,14 @@ describe UsersController do
       response.should have_selector("title", :content => "Sign up")
     end
   end
-	
-	describe "POST 'create'" do
+  
+  describe "POST 'create'" do
 
     describe "failure" do
 
       before(:each) do
         @attr = { :name => "", :email => "", :password => "",
-					:password_confirmation => "" }
+          :password_confirmation => "" }
       end
 
       it "should not create a user" do
@@ -73,11 +73,11 @@ describe UsersController do
       end
     end
 
-		describe "success" do
+    describe "success" do
 
       before(:each) do
         @attr = { :name => "New User", :email => "user@example.com",
-					:password => "foobar", :password_confirmation => "foobar" }
+          :password => "foobar", :password_confirmation => "foobar" }
       end
 
       it "should create a user" do
@@ -88,24 +88,24 @@ describe UsersController do
 
       it "should redirect to the user show page" do
         post :create, :user => @attr
-				response.should redirect_to(user_path(assigns(:user)))
+        response.should redirect_to(user_path(assigns(:user)))
       end
 
-			it "should have a welcome message" do
+      it "should have a welcome message" do
         post :create, :user => @attr
         flash[:success].should =~ /welcome to the sample app/i
       end
 
-			it "should sign the user in" do
+      it "should sign the user in" do
         post :create, :user => @attr
         controller.should be_signed_in
       end
-			
+      
     end
-		
+    
   end
 
-	describe "GET 'edit'" do
+  describe "GET 'edit'" do
 
     before(:each) do
       @user = Factory(:user)
@@ -126,11 +126,11 @@ describe UsersController do
       get :edit, :id => @user
       gravatar_url = "http://gravatar.com/emails"
       response.should have_selector("a", :href => gravatar_url,
-				:content => "change")
+                                    :content => "change")
     end
   end
 
-	describe "PUT 'update'" do
+  describe "PUT 'update'" do
 
     before(:each) do
       @user = Factory(:user)
@@ -141,7 +141,7 @@ describe UsersController do
 
       before(:each) do
         @attr = { :email => "", :name => "", :password => "",
-					:password_confirmation => "" }
+          :password_confirmation => "" }
       end
 
       it "should render the 'edit' page" do
@@ -159,7 +159,7 @@ describe UsersController do
 
       before(:each) do
         @attr = { :name => "New Name", :email => "user@example.org",
-					:password => "barbaz", :password_confirmation => "barbaz" }
+          :password => "barbaz", :password_confirmation => "barbaz" }
       end
 
       it "should change the user's attributes" do
@@ -181,7 +181,7 @@ describe UsersController do
     end
   end
 
-	describe "authentication of edit/update pages" do
+  describe "authentication of edit/update pages" do
 
     before(:each) do
       @user = Factory(:user)
@@ -199,5 +199,27 @@ describe UsersController do
         response.should redirect_to(signin_path)
       end
     end
+
+    describe "for signed-in users" do
+
+      before(:each) do
+        wrong_user = Factory(:user, :email => "user@example.net")
+        test_sign_in(wrong_user)
+      end
+
+      it "should require matching users for 'edit'" do
+        get :edit, :id => @user
+        response.should redirect_to(root_path)
+      end
+
+      it "should require matching users for 'update'" do
+        put :update, :id => @user, :user => {}
+        response.should redirect_to(root_path)
+      end
+
+    end
+
   end
+
+ 
 end
