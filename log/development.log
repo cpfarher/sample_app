@@ -6606,3 +6606,8 @@ DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3
   [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
   [1m[35mSQL (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110530224638')
   [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110808222612')[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

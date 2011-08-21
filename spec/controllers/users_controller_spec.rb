@@ -48,9 +48,9 @@ describe UsersController do
         response.should have_selector("div.pagination")
         response.should have_selector("span.disabled", :content => "Previous")
         response.should have_selector("a", :href => "/users?page=2",
-          :content => "2")
+                                      :content => "2")
         response.should have_selector("a", :href => "/users?page=2",
-          :content => "Next")
+                                      :content => "Next")
       end
 
     end
@@ -86,6 +86,15 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector("h1>img", :class => "gravatar")
     end
+
+    it "should show the user's microposts" do
+      mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
+      get :show, :id => @user
+      response.should have_selector("span.content", :content => mp1.content)
+      response.should have_selector("span.content", :content => mp2.content)
+    end
+
   end
 
   describe "GET 'new'" do
@@ -179,7 +188,7 @@ describe UsersController do
       get :edit, :id => @user
       gravatar_url = "http://gravatar.com/emails"
       response.should have_selector("a", :href => gravatar_url,
-        :content => "change")
+                                    :content => "change")
     end
   end
 
@@ -312,7 +321,9 @@ describe UsersController do
         delete :destroy, :id => @user
         response.should redirect_to(users_path)
       end
+
     end
+
   end
- 
+  
 end
