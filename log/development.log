@@ -6456,3 +6456,81 @@ Rendered layouts/_header.html.erb (3.0ms)
 Rendered layouts/_footer.html.erb (1.4ms)
 Rendered sessions/new.html.erb within layouts/application (17.3ms)
 Completed 200 OK in 42ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110530224638)
+Migrating to AddEmailUniquenessIndex (20110613231907)
+Migrating to AddPasswordToUsers (20110704212007)
+Migrating to AddSaltToUsers (20110704224910)
+Migrating to AddAdminToUsers (20110808222612)
+Migrating to CreateMicroposts (20110821013934)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("microposts")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE INDEX "index_microposts_on_user_id" ON "microposts" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("microposts")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_microposts_on_user_id')[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE INDEX "index_microposts_on_created_at" ON "microposts" ("created_at")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110821013934')[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_microposts_on_created_at')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_microposts_on_user_id')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (13.7ms)[0m  CREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35mSQL (2.7ms)[0m  CREATE INDEX "index_microposts_on_created_at" ON "microposts" ("created_at")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35mSQL (0.3ms)[0m  PRAGMA index_info('index_microposts_on_created_at')
+  [1m[36mSQL (3.3ms)[0m  [1mCREATE INDEX "index_microposts_on_user_id" ON "microposts" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (3.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (2.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110821013934')
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110704212007')[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704224910')
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110530224638')
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110808222612')[0m
