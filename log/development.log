@@ -7161,3 +7161,153 @@ DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
   [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
   [1m[35mMicropost Load (2.5ms)[0m  SELECT "microposts".* FROM "microposts" WHERE ("microposts".user_id = 1) ORDER BY microposts.created_at DESC
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-08-25 00:55:31 -0300
+  Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `authenticate' for #<UsersController:0x00000003b394a0>):
+  
+
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.4ms)
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.6ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (6.2ms)[0m  CREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35mSQL (2.8ms)[0m  CREATE INDEX "index_microposts_on_created_at" ON "microposts" ("created_at")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_microposts_on_created_at')
+  [1m[36mSQL (3.6ms)[0m  [1mCREATE INDEX "index_microposts_on_user_id" ON "microposts" ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (3.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (4.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (2.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110821013934')
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110704212007')[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110704224910')
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110613231907')[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110530224638')
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110808222612')[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-19 00:00:56 -0300
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (4.2ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (6.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (211.1ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (256.0ms)
+Completed 200 OK in 301ms (Views: 292.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-11-19 00:01:11 -0300
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (1.3ms)
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (11.9ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered users/new.html.erb within layouts/application (171.7ms)
+Completed 200 OK in 260ms (Views: 195.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-19 00:01:37 -0300
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xz7CfdnGdVyvns8A/2Rk2/MO7tyQis8jaMVgd6KD1ok=", "user"=>{"name"=>"esteban", "email"=>"ecforna@yahoo.com.ar", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.7ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('ecforna@yahoo.com.ar')) LIMIT 1
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin") VALUES ('esteban', 'ecforna@yahoo.com.ar', '2011-11-19 03:01:37.771666', '2011-11-19 03:01:37.771666', '5db0e5d6cea7a514395ed61a289505e51ba48019093cf317218a39456a9760f7', '13cbb4d7b24f1f20390efcbda79e1660a239404fa794408c1e8371b845d55e3e', 'f')[0m
+Redirected to http://0.0.0.0:3000/users/102
+Completed 302 Found in 258ms
+
+
+Started GET "/users/102" for 127.0.0.1 at 2011-11-19 00:01:37 -0300
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1
+  [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE ("microposts".user_id = 102) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 102)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 102)[0m
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered users/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 199ms (Views: 51.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/102" for 127.0.0.1 at 2011-11-19 00:01:47 -0300
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1[0m
+  [1m[35mMicropost Load (0.4ms)[0m  SELECT "microposts".* FROM "microposts" WHERE ("microposts".user_id = 102) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 102)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 102)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1[0m
+Rendered layouts/_header.html.erb (5.9ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered users/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 211ms (Views: 82.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/102" for 127.0.0.1 at 2011-11-19 00:01:47 -0300
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1
+  [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE ("microposts".user_id = 102) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 102)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 102)[0m
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1
+Rendered layouts/_header.html.erb (6.0ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered users/show.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 151ms (Views: 84.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-19 00:01:49 -0300
+  Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `authenticate' for #<UsersController:0x00000002bc8a48>):
+  
+
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.1ms)
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.8ms)
