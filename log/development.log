@@ -7543,3 +7543,169 @@ Rendered layouts/_header.html.erb (4.5ms)
 Rendered layouts/_footer.html.erb (1.4ms)
 Rendered pages/home.html.erb within layouts/application (32.0ms)
 Completed 200 OK in 177ms (Views: 37.1ms | ActiveRecord: 0.8ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/esteban/ruby/sample_app/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-21 21:31:34 -0300
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.8ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 157ms (Views: 49.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-21 21:34:38 -0300
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 80ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-11-21 21:34:40 -0300
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (2.5ms)
+Rendered layouts/_stylesheets.html.erb (3.9ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (24.8ms)
+Rendered layouts/_footer.html.erb (3.1ms)
+Rendered users/new.html.erb within layouts/application (149.4ms)
+Completed 200 OK in 237ms (Views: 204.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-11-21 21:34:43 -0300
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (4.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (196.7ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered sessions/new.html.erb within layouts/application (224.9ms)
+Completed 200 OK in 290ms (Views: 287.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-11-21 21:34:57 -0300
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S55Obut53epcT6o3GbouSmFNwLD+D4coxhlgjFJZuTk=", "session"=>{"email"=>"ecfornal@yahoo.com.ar", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'ecfornal@yahoo.com.ar' LIMIT 1
+Redirected to http://0.0.0.0:3000/users/103
+Completed 302 Found in 252ms
+
+
+Started GET "/users/103" for 127.0.0.1 at 2011-11-21 21:34:58 -0300
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+  [1m[35mMicropost Load (0.5ms)[0m  SELECT "microposts".* FROM "microposts" WHERE ("microposts".user_id = 103) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 103)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered microposts/_micropost.html.erb (12.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 103)
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered users/show.html.erb within layouts/application (96.1ms)
+Completed 200 OK in 288ms (Views: 101.0ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/microposts/301" for 127.0.0.1 at 2011-11-21 21:35:43 -0300
+  Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S55Obut53epcT6o3GbouSmFNwLD+D4coxhlgjFJZuTk=", "id"=>"301"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Completed 500 Internal Server Error in 125ms
+
+ActionView::MissingTemplate (Missing template microposts/destroy with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/esteban/ruby/sample_app/app/views"):
+  
+
+Rendered /home/esteban/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-21 21:46:56 -0300
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE (user_id = 103) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0[0m
+Rendered shared/_error_messages.html.erb (1.2ms)
+Rendered shared/_micropost_form.html.erb (12.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered shared/_feed_item.html.erb (15.2ms)
+Rendered shared/_feed.html.erb (17.8ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 103)[0m
+Rendered shared/_user_info.html.erb (11.1ms)
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 204ms (Views: 123.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2011-11-21 21:47:07 -0300
+  Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S55Obut53epcT6o3GbouSmFNwLD+D4coxhlgjFJZuTk=", "micropost"=>{"content"=>"para borar\r\n"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES ('para borar
+', 103, '2011-11-22 00:47:07.676169', '2011-11-22 00:47:07.676169')[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 288ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-21 21:47:07 -0300
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mMicropost Load (0.5ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE (user_id = 103) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0[0m
+Rendered shared/_error_messages.html.erb (1.3ms)
+Rendered shared/_micropost_form.html.erb (61.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (18.4ms)
+Rendered shared/_feed.html.erb (20.8ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 103)
+Rendered shared/_user_info.html.erb (12.4ms)
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (114.7ms)
+Completed 200 OK in 242ms (Views: 119.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/microposts/302" for 127.0.0.1 at 2011-11-21 21:47:12 -0300
+  Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S55Obut53epcT6o3GbouSmFNwLD+D4coxhlgjFJZuTk=", "id"=>"302"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+  [1m[35mMicropost Load (4.3ms)[0m  SELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = 302 AND ("microposts".user_id = 103) ORDER BY microposts.created_at DESC LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mDELETE FROM "microposts" WHERE "microposts"."id" = 302[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 169ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-21 21:47:12 -0300
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mMicropost Load (0.5ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE (user_id = 103) ORDER BY microposts.created_at DESC LIMIT 30 OFFSET 0[0m
+Rendered shared/_error_messages.html.erb (1.1ms)
+Rendered shared/_micropost_form.html.erb (12.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered shared/_feed_item.html.erb (63.4ms)
+Rendered shared/_feed.html.erb (65.7ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE ("microposts".user_id = 103)[0m
+Rendered shared/_user_info.html.erb (11.0ms)
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered pages/home.html.erb within layouts/application (109.6ms)
+Completed 200 OK in 184ms (Views: 114.8ms | ActiveRecord: 6.4ms)
